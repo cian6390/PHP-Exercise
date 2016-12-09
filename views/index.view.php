@@ -1,10 +1,10 @@
 <?php require('partials/head.php') ?>
 
 <h1>Hello <?= $name; ?></h1>
-<h2>Try a Post!</h2>
+<h2>Try to save a name</h2>
 <form action="/post" method="POST">
-    <label for="title">Title：</label>
-    <input type="text" name="title" id="title">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Enter A Name">
     <button type="submit">Submit</button>
 </form>
 

@@ -3,10 +3,10 @@
 return [
     'db'    => 'mysql',
     'host'  => '127.0.0.1',
-    'dbname'    => 'oyd',
+    'dbname'    => 'test',
     'username'  => 'root',
     'password'  => '',
-    'option'    => [
-
+    'options'    => [
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
     ]
 ];
