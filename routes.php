@@ -1,9 +1,8 @@
 <?php
 
-/** Get */
-$router->get('', 'controllers/index.php');
-$router->get('about', 'controllers/about.php');
-$router->get('contact', 'controllers/contact.php');
+$router->get('', 'PageController@home');
+$router->get('about', 'PageController@about');
+$router->get('contact', 'PageController@contact');
 
-/** Post */
-$router->post('post', 'controllers/post.php');
+$router->get('users', 'UserController@index');
+$router->post('user', 'UserController@store');
