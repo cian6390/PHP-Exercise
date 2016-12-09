@@ -1,8 +1,14 @@
 <?php
 
+namespace App\Core;
+
+use App\Core\App;
+use App\Core\Database\QueryBuilder;
+use App\Core\Database\Connection;
+
 require 'functions.php';
 
-App::bind('config', require 'config.php');
+App::bind('config', require '../config.php');
 
 // dd(App::get('config'));
 

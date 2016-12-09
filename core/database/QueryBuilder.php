@@ -1,10 +1,12 @@
 <?php
 
+namespace App\Core\Database;
+
 class QueryBuilder
 {
     protected $pdo;
 
-    public function __construct (PDO $pdo)
+    public function __construct (\PDO $pdo)
     {
         $this->pdo = $pdo;
     }
@@ -15,7 +17,7 @@ class QueryBuilder
 
         $sql->execute();
         
-        return $sql->fetchAll(PDO::FETCH_OBJ);
+        return $sql->fetchAll(\PDO::FETCH_OBJ);
     }
 
     public function insert ($table, $paramters)
@@ -30,7 +32,7 @@ class QueryBuilder
         try {
             $statement = $this->pdo->prepare($sql);
             $statement->execute($paramters);
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             // dd($e->getMessage());
             die('Woops something went wrong.');
         }
